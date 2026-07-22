@@ -3,279 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>POMPAM | Portfolio</title>
+    <title>Portfolio | Araya Winthachai</title>
 
     <link rel="stylesheet" href="style.css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
-    <script defer src="script.js"></script>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
 </head>
 
 <body>
 
-<header>
-
-<div class="logo">
-    Portfolio
+<div id="loader">
+    <div class="spinner"></div>
 </div>
+
+<header>
 
 <nav>
 
-<a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#education">Education</a>
-<a href="#sop">SOP</a>
-<a href="#certificate">Certificates</a>
-<a href="#activity">Activities</a>
-<a href="#contact">Contact</a>
-
-</nav>
-
-</header>
-
-<!-- HOME -->
-
-<section id="home" class="hero">
-
-<img src="images/profile.jpg" class="profile">
-
-<h1>YOUR NAME</h1>
-
-<h2>Faculty of ............</h2>
-
-<h3>Major ............</h3>
-
-<p>
-Portfolio for Mahidol University
-</p>
-
-<a href="#about" class="button">
-Explore Portfolio
-</a>
-
-</section>
-
-<!-- ABOUT -->
-
-<section id="about">
-
-<h1>About Me</h1>
-
-<div class="card">
-
-<div class="left">
-
-<img src="images/profile.jpg">
-
+<div class="logo">
+PORTFOLIO
 </div>
-
-<div class="right">
-
-<h2>ประวัติส่วนตัว</h2>
-
-<p><b>ชื่อ :</b> ........................................</p>
-
-<p><b>ชื่อเล่น :</b> ........................................</p>
-
-<p><b>วันเกิด :</b> ........................................</p>
-
-<p><b>โรงเรียน :</b> ........................................</p>
-
-<p><b>สายการเรียน :</b> ........................................</p>
-
-<br>
-
-<h2>ความสามารถ</h2>
 
 <ul>
 
-<li>Microsoft Office</li>
-
-<li>Canva</li>
-
-<li>HTML & CSS</li>
-
-<li>Adobe Photoshop</li>
-
-<li>Leadership</li>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#education">Education</a></li>
+<li><a href="#sop">SOP</a></li>
+<li><a href="#certificates">Certificates</a></li>
+<li><a href="#activities">Activities</a></li>
+<li><a href="#contact">Contact</a></li>
 
 </ul>
 
-<br>
+</nav>
+
+<section class="hero" id="home">
+
+<div class="overlay"></div>
+
+<div class="hero-content" data-aos="zoom-in">
+
+<img src="images/profile.jpg" class="profile">
+
+<h1>อารยา วินทะไชย</h1>
+
+<h2>Portfolio Website</h2>
+
+<h3>คณะพยาบาลศาสตร์</h3>
 
 <p>
-
-เขียนแนะนำตัวเองตรงนี้
-
+Faculty of Nursing
 </p>
 
-</div>
+<a href="#about" class="btn">
+Explore
+</a>
 
 </div>
 
 </section>
 
-<!-- EDUCATION -->
+</header>
+
+<section id="about">
+
+<div class="glass" data-aos="fade-up">
+
+<h2>About Me</h2>
+
+<p>
+
+สวัสดีค่ะ ดิฉันชื่อ
+<b>อารยา วินทะไชย</b>
+
+กำลังศึกษาระดับชั้นมัธยมศึกษาปีที่ 6
+มีความตั้งใจศึกษาต่อคณะพยาบาลศาสตร์
+เพราะต้องการช่วยเหลือผู้ป่วยและดูแลผู้อื่น
+
+เป็นคนรับผิดชอบ ซื่อสัตย์
+ทำงานเป็นทีมได้ดี
+พร้อมเรียนรู้สิ่งใหม่ ๆ
+และพัฒนาตนเองอยู่เสมอ
+
+</p>
+
+</div>
+
+</section>
 
 <section id="education">
 
-<h1>Education</h1>
+<h2 data-aos="fade-down">
+Education
+</h2>
 
 <div class="timeline">
 
-<div class="timeline-box">
+<div class="timeline-item left" data-aos="fade-right">
 
-<h2>มัธยมศึกษาตอนต้น</h2>
+<div class="content">
 
-<p>โรงเรียน.......................................</p>
-
-<p>ปี............. - .............</p>
-
-</div>
-
-<div class="timeline-box">
-
-<h2>มัธยมศึกษาตอนปลาย</h2>
-
-<p>โรงเรียน.......................................</p>
-
-<p>แผนการเรียน................................</p>
-
-<p>ปี............. - .............</p>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- SOP -->
-
-<section id="sop">
-
-<h1>Statement of Purpose</h1>
-
-<div class="sop-box">
+<h3>ระดับมัธยมศึกษาตอนต้น</h3>
 
 <p>
-
-วาง SOP ของคุณที่นี่
-
+โรงเรียน................................
 </p>
 
-</div>
-
-</section>
-
-<!-- CERTIFICATES -->
-
-<section id="certificate">
-
-<h1>Certificates</h1>
-
-<div class="gallery">
-
-<img src="images/cert1.jpg">
-
-<img src="images/cert2.jpg">
-
-<img src="images/cert3.jpg">
-
-<img src="images/cert4.jpg">
-
-<img src="images/cert5.jpg">
-
-<img src="images/cert6.jpg">
-
-</div>
-
-</section>
-
-<!-- ACTIVITIES -->
-
-<section id="activity">
-
-<h1>Activities</h1>
-
-<div class="activity-grid">
-
-<div class="activity-card">
-
-<img src="images/activity1.jpg">
-
-<h2>ชื่อกิจกรรม</h2>
-
 <p>
-
-คำอธิบายกิจกรรม
-
-</p>
-
-</div>
-
-<div class="activity-card">
-
-<img src="images/activity2.jpg">
-
-<h2>ชื่อกิจกรรม</h2>
-
-<p>
-
-คำอธิบายกิจกรรม
-
-</p>
-
-</div>
-
-<div class="activity-card">
-
-<img src="images/activity3.jpg">
-
-<h2>ชื่อกิจกรรม</h2>
-
-<p>
-
-คำอธิบายกิจกรรม
-
+ปี พ.ศ. ....
 </p>
 
 </div>
 
 </div>
 
-</section>
+<div class="timeline-item right" data-aos="fade-left">
 
-<!-- CONTACT -->
+<div class="content">
 
-<section id="contact">
+<h3>ระดับมัธยมศึกษาตอนปลาย</h3>
 
-<h1>Contact</h1>
+<p>
+โรงเรียน................................
+</p>
 
-<div class="contact-box">
+<p>
+สายการเรียน คณิตศาสตร์–ภาษาอังกฤษ
+</p>
 
-<p>📧 Email : your@email.com</p>
+</div>
 
-<p>📱 Phone : 081-234-5678</p>
-
-<p>💻 GitHub : github.com/yourname</p>
-
-<p>📍 จังหวัด : สมุทรสาคร</p>
+</div>
 
 </div>
 
 </section>
-
-<footer>
-
-<h2>Thank You</h2>
-
-<p>© 2026 Portfolio</p>
-
-</footer>
-
-<button id="topBtn">↑</button>
-
-</body>
-
-</html>
