@@ -1,46 +1,224 @@
-*{
-margin:0;
+// ==============================
+// Loading Screen
+// ==============================
 
-padding:0;
+window.addEventListener("load", () => {
 
-box-sizing:border-box;
+    const loader = document.getElementById("loader");
 
-scroll-behavior: smooth;
+    loader.style.opacity = "0";
 
-font-family:Prompt, sans-serif;
+    setTimeout(() => {
 
-body{
+        loader.style.display = "none";
 
-background:#f4faf6;
+    },500);
 
-70%
+});
 
-github.com
+// ==============================
+// Back To Top
+// ==============================
 
-position:fixed;
+const topBtn = document.getElementById("topBtn");
 
-17
+window.onscroll = function(){
 
-width:100%;
+    if(document.documentElement.scrollTop > 300){
 
-19
+        topBtn.style.display="block";
 
-display: flex;
+    }else{
 
-21
+        topBtn.style.display="none";
 
-justify-content: ween;
+    }
 
-22
+}
 
-23 padding: 20px 60px;
+topBtn.onclick = function(){
 
-25
+    window.scrollTo({
 
-background:white;
+        top:0,
 
-26
+        behavior:"smooth"
 
-27
+    });
 
-box-shadow: 5px 20px rgba(0,0,0,.08);
+}
+
+// ==============================
+// Navbar Effect
+// ==============================
+
+const nav = document.querySelector("nav");
+
+window.addEventListener("scroll",()=>{
+
+    if(window.scrollY>50){
+
+        nav.style.background="rgba(10,61,145,.92)";
+        nav.style.boxShadow="0 10px 30px rgba(0,0,0,.3)";
+
+    }else{
+
+        nav.style.background="rgba(0,0,0,.25)";
+        nav.style.boxShadow="none";
+
+    }
+
+});
+
+// ==============================
+// Lightbox
+// ==============================
+
+const lightbox = document.getElementById("lightbox");
+const lightImg = document.getElementById("lightbox-img");
+
+function openImage(src){
+
+    lightbox.style.display="flex";
+
+    lightImg.src=src;
+
+}
+
+function closeImage(){
+
+    lightbox.style.display="none";
+
+}
+
+lightbox.addEventListener("click",(e)=>{
+
+    if(e.target===lightbox){
+
+        closeImage();
+
+    }
+
+});
+
+// ==============================
+// Smooth Scroll
+// ==============================
+
+document.querySelectorAll('nav a').forEach(link=>{
+
+    link.addEventListener("click",function(e){
+
+        e.preventDefault();
+
+        const target=document.querySelector(this.getAttribute("href"));
+
+        target.scrollIntoView({
+
+            behavior:"smooth"
+
+        });
+
+    });
+
+});
+
+// ==============================
+// Active Menu
+// ==============================
+
+const sections=document.querySelectorAll("section");
+const navLinks=document.querySelectorAll("nav ul li a");
+
+window.addEventListener("scroll",()=>{
+
+    let current="";
+
+    sections.forEach(section=>{
+
+        const sectionTop=section.offsetTop-120;
+
+        if(pageYOffset>=sectionTop){
+
+            current=section.getAttribute("id");
+
+        }
+
+    });
+
+    navLinks.forEach(link=>{
+
+        link.classList.remove("active");
+
+        if(link.getAttribute("href")==="#"+current){
+
+            link.classList.add("active");
+
+        }
+
+    });
+
+});
+
+// ==============================
+// Hero Button Animation
+// ==============================
+
+const button=document.querySelector(".btn");
+
+button.addEventListener("mouseenter",()=>{
+
+    button.style.transform="scale(1.08)";
+
+});
+
+button.addEventListener("mouseleave",()=>{
+
+    button.style.transform="scale(1)";
+
+});
+
+// ==============================
+// Fade In On Scroll
+// ==============================
+
+const observer=new IntersectionObserver(entries=>{
+
+    entries.forEach(entry=>{
+
+        if(entry.isIntersecting){
+
+            entry.target.classList.add("fade-up");
+
+        }
+
+    });
+
+});
+
+document.querySelectorAll(".glass,.card,.activity-card,.timeline-item").forEach(el=>{
+
+    observer.observe(el);
+
+});
+
+// ==============================
+// ESC Close Lightbox
+// ==============================
+
+document.addEventListener("keydown",(e)=>{
+
+    if(e.key==="Escape"){
+
+        closeImage();
+
+    }
+
+});
+
+// ==============================
+// Console Message
+// ==============================
+
+console.log("%cPortfolio Website Ready!",
+"color:#FFD54F;font-size:18px;font-weight:bold;");
